@@ -6,7 +6,6 @@ export default function Home() {
         <>
             <header className='hero'>
                 <div className='grid'>
-
                     <Link href='/project'>Change page</Link>
                 </div>
             </header>

@@ -9,14 +9,15 @@ export default function App({ Component, pageProps }) {
     const router = useRouter()
 
     return (
-        <AnimatePresence mode='wait'>
+        <AnimatePresence mode='sync'>
             <motion.div key={router.pathname}>
                 <Layout>
                     <Component {...pageProps} />
 
-                    <Scene />
                 </Layout>
             </motion.div>
+
+            <Scene />
         </AnimatePresence>
     )
 }
