@@ -1,0 +1,66 @@
+@import './reset';
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: #0d0e13;
+}
+
+.info {
+    &-top {
+        width: 100%;
+        padding: 0 3rem;
+        position: absolute;
+        top: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            font-size: 1.1rem;
+            color: #f8f8f8;
+        }
+    }
+    &-bottom {
+        width: 100%;
+        padding: 0 3rem;
+        position: absolute;
+        bottom: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            font-size: 1.1rem;
+            color: #f8f8f8;
+        }
+    }
+}
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero {
+    h1 {
+        color: #f8f8f8;
+        font-size: 4vw;
+        font-weight: 300;
+        position: absolute;
+        top: 50%;
+        left: 20vw;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    a {
+        color: #f8f8f8;
+        text-decoration: underline;
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+}
