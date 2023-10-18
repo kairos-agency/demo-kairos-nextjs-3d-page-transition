@@ -8,6 +8,8 @@ import Scene from '../components/Scene'
 export default function App({ Component, pageProps }) {
     const router = useRouter()
 
+    const currentPage = router.pathname.split('/').filter(Boolean).pop() || 'home'
+
     return (
         <AnimatePresence mode='sync'>
             <motion.div key={router.pathname}>
@@ -17,7 +19,7 @@ export default function App({ Component, pageProps }) {
                 </Layout>
             </motion.div>
 
-            <Scene />
+            <Scene page={currentPage} />
         </AnimatePresence>
     )
 }

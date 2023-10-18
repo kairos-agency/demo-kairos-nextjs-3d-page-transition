@@ -1,14 +1,7 @@
-import { useRouter } from 'next/router'
 import { motion } from 'framer-motion-3d'
 import { Canvas } from '@react-three/fiber'
-import { useRef } from 'react'
 
-export default function Scene({ Component, pageProps }) {
-    const router = useRouter()
-    const mesh = useRef()
-
-    const currentPage = router.pathname.split('/').filter(Boolean).pop() || 'home'
-
+export default function Scene({ page }) {
     const pageVariants = {
         home: {
             initial: { rotateX: 0.5, rotateY: 0.5, rotateZ: 0, x: 0 },
@@ -32,21 +25,40 @@ export default function Scene({ Component, pageProps }) {
                 <ambientLight intensity={3} />
                 <spotLight position={[20, 20, 25]} penumbra={1} angle={0.2} color='white' castShadow shadow-mapSize={[64, 64]} />
 
-                <motion.mesh
-                    ref={mesh}
-                    scale={2.5}
-                    receiveShadow
-                    castShadow
-                    whileHover={{ scale: 2.8 }}
-                    initial={pageVariants[currentPage].initial}
-                    animate={pageVariants[currentPage].animate}
-                    exit={pageVariants[currentPage].exit}
-                    transition={{ duration: 0.8, ease: [0.265, 0.84, 0.44, 1] }}
-                >
-                    <boxGeometry args={[1, 1, 1]} />
-                    <meshNormalMaterial />
-                </motion.mesh>
+                {pageVariants[page] && (
+                    <>
+                        <motion.mesh
+                            scale={2.5}
+                            receiveShadow
+                            castShadow
+                            whileHover={{ scale: 2.8 }}
+                            initial={pageVariants[page].initial}
+                            animate={pageVariants[page].animate}
+                            exit={pageVariants[page].exit}
+                            transition={{ duration: 0.8, ease: [0.265, 0.84, 0.44, 1], delay: 0.1 }}
+                        >
+                            <boxGeometry args={[1, 1, 1]} />
+                            <meshNormalMaterial />
+                        </motion.mesh>
+
+                        <motion.mesh
+                            scale={1}
+                            position={[-3, -3, 0]}
+                            receiveShadow
+                            castShadow
+                            whileHover={{ scale: 2.8 }}
+                            initial={pageVariants[page].initial}
+                            animate={pageVariants[page].animate}
+                            exit={pageVariants[page].exit}
+                            transition={{ duration: 0.8, ease: [0.265, 0.84, 0.44, 1] }}
+                        >
+                            <boxGeometry args={[1, 1, 1]} />
+                            <meshNormalMaterial />
+                        </motion.mesh>
+                    </>
+                )}
             </Canvas>
         </motion.div>
     )
 }
+
