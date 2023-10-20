@@ -15,7 +15,6 @@ export default function App({ Component, pageProps }) {
             <motion.div key={router.pathname}>
                 <Layout>
                     <Component {...pageProps} />
-
                 </Layout>
             </motion.div>
 

@@ -11,27 +11,27 @@ body {
 .info {
     &-top {
         width: 100%;
-        padding: 0 3rem;
+        padding: 0 2rem;
         position: absolute;
-        top: 3rem;
+        top: 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         p {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: #f8f8f8;
         }
     }
     &-bottom {
         width: 100%;
-        padding: 0 3rem;
+        padding: 0 2rem;
         position: absolute;
-        bottom: 3rem;
+        bottom: 2rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         p {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             color: #f8f8f8;
         }
     }
@@ -44,23 +44,48 @@ body {
 }
 
 .hero {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    &-home {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        a {
+            text-align: center;
+            margin: 1rem auto 0;
+        }
+    }
+    &-project {
+        left: 2rem;
+        transform: translateY(-50%);
+        @media (min-width: 1000px) {
+            left: 15vw;
+        }
+        a {
+            margin: 1rem 0 0 0.2rem;
+            @media (min-width: 700px) {
+                margin-left: 0.4rem;
+            }
+            @media (min-width: 1000px) {
+                margin-left: 0.6rem;
+            }
+        }
+    }
     h1 {
         color: #f8f8f8;
-        font-size: 4vw;
-        font-weight: 300;
-        position: absolute;
-        top: 50%;
-        left: 20vw;
-        transform: translateY(-50%);
-        z-index: 1;
+        font-size: 3rem;
+        font-weight: 400;
+        @media (min-width: 700px) {
+            font-size: 6rem;
+        }
+        @media (min-width: 1000px) {
+            font-size: 9rem;
+        }
     }
     a {
+        width: fit-content;
         color: #f8f8f8;
         text-decoration: underline;
-        position: absolute;
-        top: 3rem;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
+        font-size: 1.1rem;
     }
 }

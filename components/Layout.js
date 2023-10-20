@@ -9,12 +9,12 @@ export default function Layout({ children }) {
         <ReactLenis root>
             <main className={inter.className}>
                 <div className='info-top'>
-                    <Image src='/images/logo-kairos.svg' width={105} height={19} alt='Logo Kairos Agency.' />
-                    <p>next.js_3d_page_transition</p>
+                    <Image src='/images/logo-kairos.svg' width={80} height={14} alt='Logo Kairos Agency.' />
+                    <p>next.js 3d page transition</p>
                 </div>
 
                 <div className='info-bottom'>
-                    <p>13_octobre_2023</p>
+                    <p>13 octobre 2023</p>
                 </div>
 
                 {children}
