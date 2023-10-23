@@ -1,9 +1,15 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 export default function Project() {
     return (
         <>
+            <Head>
+                <title>Next.js 3d page transition - Demo Kairos Agency - Projects</title>
+                <meta name='description' content="Next.js 3d page transition - Demo Kairos Agency - Projects." />
+            </Head>
+
             <header className='hero hero-project'>
                 <div className='grid'>
                     <motion.div

@@ -14,7 +14,7 @@ export default function Layout({ children }) {
                 </div>
 
                 <div className='info-bottom'>
-                    <p>13 octobre 2023</p>
+                    <p>October 23, 2023</p>
                 </div>
 
                 {children}
