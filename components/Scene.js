@@ -26,16 +26,15 @@ export default function Scene({ page }) {
             >
                 <ambientLight intensity={1} />
 
-                <motion.pointLight
-                    position={[pageVariants[page].light, 10, 0]}
-                    intensity={500}
-                    animate={{ x: pageVariants[page].light }}
-                    transition={{ duration: 1.6, ease: [0.265, 0.84, 0.44, 1] }}
-
-                />
-
                 {pageVariants[page] && (
                     <>
+                        <motion.pointLight
+                            position={[pageVariants[page].light, 10, 0]}
+                            intensity={500}
+                            animate={{ x: pageVariants[page].light }}
+                            transition={{ duration: 1.6, ease: [0.265, 0.84, 0.44, 1] }}
+                        />
+
                         <motion.mesh
                             scale={2.5}
                             receiveShadow
