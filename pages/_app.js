@@ -1,8 +1,7 @@
 import '../styles/index.scss'
 import Layout from '../components/Layout'
 import { useRouter } from 'next/router'
-import { AnimatePresence } from 'framer-motion'
-import { motion } from 'framer-motion-3d'
+import { motion, AnimatePresence } from 'framer-motion'
 import Scene from '../components/Scene'
 
 export default function App({ Component, pageProps }) {

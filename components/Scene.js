@@ -18,7 +18,7 @@ export default function Scene({ page }) {
     }
 
     return (
-        <motion.div className='scene'>
+        <div className='scene'>
             <Canvas
                 shadows
                 gl={{ alpha: true, stencil: false, depth: false, antialias: true, powerPreference: 'high-performance' }}
@@ -67,7 +67,7 @@ export default function Scene({ page }) {
                     </>
                 )}
             </Canvas>
-        </motion.div>
+        </div>
     )
 }
 

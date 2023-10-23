@@ -14,6 +14,7 @@ export default function Home() {
                     >
                         <h1>Homepage</h1>
                     </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -23,7 +24,7 @@ export default function Home() {
                         <Link href='/project'>See projects</Link>
                     </motion.div>
                 </div>
-            </header >
+            </header>
         </>
     )
 }
