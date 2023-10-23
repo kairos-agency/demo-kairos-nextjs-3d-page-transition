@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
 import { ReactLenis } from '@studio-freight/react-lenis'
 import Image from 'next/image'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,6 +19,8 @@ export default function Layout({ children }) {
                 </div>
 
                 {children}
+
+                <Analytics />
             </main>
         </ReactLenis>
     )
